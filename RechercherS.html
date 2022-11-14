@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="RecercherS.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="test"><a href="./Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test"><a href="fonctions.html">Les fonctions</a></li>
+            <li class="drop">
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les boucles</h4>
+               
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+   <div id="chaine">
+    
+    <h1>rechercher et supprimer un mot</h1>
+        <div id="enonce">
+            <h3>Enoncé</h3>
+           <p>Ecrire un programme Javascript qui demande à l’utilisateur de saisir<br> une phrase
+                 dans une zone de texte et un mot dans une autre zone de texte. <br>Le clique sur le
+                  bouton rechercher affiche un message si le mot existe dans la phrase ou non.<br> Le clique sur le 
+                  bouton supprimer permet d’effacer
+                 toutes les occurrence du mot dans la phrase <br>( si le mot existe bien sûr).</p>  
+        </div>
+                            <h3 id="demo">Démo</h3>
+                            <div id="test">
+
+                                            <label>Saisir une pharse </label> 
+                                            <input type="text"id="phrase"  >
+                                           <button id="button" onclick="saiserPhrase() "class="btn">Recherche</button> <br>
+                                        
+                                            <div id="test2">
+                                                <label>Saisir le mot a rechercher ou a supprimer</label>
+                                            <input id="mots" type="text">
+                                              <button id="clear" onclick="supprimer()" class="btn">
+                                                Supprimer </button>
+                                            </div>
+                                            
+                                    
+
+                                        <div class="bloc">
+                                            <p id="resultat"></p>
+                                        </div>
+                         
+                                        </div>   
+                    <div class="var-code">
+                                        <h3>Code Source</h3>
+                            </div>
+    <textarea name="source" id="source" cols="110" rows="14" readonly>
+        function clearOcurences()
+        {
+         var phrase=document.getElementById("phrase").value;
+         var mots=document.getElementById("mots").value;
+         var result = phrase.indexOf(mots);
+         if(result !== -1)
+         {
+               var newString =phrase.replace(mots, '');
+                  document.getElementById('resultat').innerHTML=
+                  "le mot bien supprimer"+"<br>"+newString;
+                  document.getElementById("phrase").value="";
+                 document.getElementById("mots").value="";
+         }
+         else{
+         document.getElementById('resultat').innerHTML="Le mot n'existe pas!";
+          }
+       
+         
+ 
+        }
+    </textarea>
+                    </div>      
+                </div>
+    </div>
+
+   
+</div>
+
+<script>
+ 
+  function saiserPhrase(){
+    var phrase=document.getElementById("phrase").value;
+    var mots=document.getElementById("mots").value;
+    var result = phrase.indexOf(mots); //Position 0.....
+    // alert(result);
+    if(result !== -1)
+    {
+        document.getElementById('resultat').innerHTML="Le mot existe!";
+    }
+    else{
+        document.getElementById('resultat').innerHTML="Le mot n'existe pas!";
+    } 
+  }
+  function supprimer()
+       {
+        var phrase=document.getElementById("phrase").value;
+        var mots=document.getElementById("mots").value;
+        var result = phrase.indexOf(mots);
+        if(result !== -1)
+        {
+                 var newString =phrase.replace(mots,'');
+                 document.getElementById('resultat').innerHTML= "le mot bien supprimer"+"<br>"
+                 +"la phrase est :"+newString;
+                 document.getElementById('resultat').style.color="red";
+                 document.getElementById('resultat').style.fontSize="20px";
+                
+                 document.getElementById("phrase").value="";
+                document.getElementById("mots").value="";
+        }
+        else{
+        document.getElementById('resultat').innerHTML="Le mot n'existe pas!";
+         }
+      
+        
+
+       }
+</script>
+</body>
+</html>

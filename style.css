@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  background-color: #6ac2cf;
+  color: #E7EFF6;
+  gap: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul, li, a{
+  font-family: 'Poppins', sans-serif;
+} 
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}
+
+nav{
+  width: 20%;
+  background-color: #2A4D69;
+  list-style: none;
+}
+nav a{
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  margin-right: 1.5rem ;
+  text-decoration: none;
+  font-size: 0.1rem;
+  color: #E7EFF6;
+  display: block;
+  cursor: pointer;
+  font-size: medium;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav a:hover {
+  color: #4B86B4;
+  transition: all 0.3s;
+}
+
+.chain{
+  color: #E7EFF6;
+}
+
+.chaines h4 {
+  color: #E7EFF6;
+}
+
+.chaines li {
+  margin-left: 2rem;
+}
+
+.test{
+  margin-left: 0.5rem;
+}
+
+.variables{   
+  line-height: 30px;
+  }
+
+.demo-var-title, h3{
+  background-color: #2A4D69;
+  width: 150px;
+}
+
+h1{
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+h3{
+  margin-top: 30px;
+}
+
+p{
+  background-color: #81a3c1;
+  padding: 20px;
+}
+
+#nombre{
+  display: flex;
+  background-color: #81a3c1;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.demo-var2{
+  padding-left: 30px;
+}
+
+#nombre button{
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 10%;
+  height: 10%; 
+  border: none;
+  background-color: #2A4D69;
+  cursor: pointer;
+}
+
+button:hover{
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #ADCBE3;
+}
+
+/* Boucle imbrique */
+
+.imbr-input{
+  background-color: #81a3c1;
+  padding: 20px; 
+}
+
+#imbr-btn{
+  height: 18px;
+width: 90px;
+background-color: black;
+color: white;
+cursor: pointer;
+}
+
+#imbr-btn:hover{
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #ADCBE3;
+}
+
+/* Boucle WHile */
+
+.bouc-while{
+  line-height: 30px;
+}
+
+.while-input{
+  background-color: #81a3c1;
+padding-left: 20px;
+padding-top: 20px;
+}
+
+.while-input [type="text"]{
+ margin-left  : 20px;
+}
+
+.while-input h6{
+  display: none;
+}
+
+#btn{
+  height: 19px;
+  width: 98px;
+  background-color: black;
+  color: white; 
+  border: none;
+  cursor: pointer;
+}
+
+#btn:hover{
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #ADCBE3;
+}
+
+/* Boucle FOR */
+
+.bouc-for{
+  line-height: 30px;
+}
+
+.input-for{
+  background-color: #81a3c1;
+  padding: 20px;
+}
+
+.input-for button{
+  background-color: black;
+  color: white;
+  width: 20%;
+  cursor: pointer;
+}
+
+.input-for button:hover{
+  background-color: #ADCBE3;
+   transition: 0.3s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 987px){
+
+  /*Nav*/
+
+nav .test a{
+  font-size: 10px;
+}
+
+nav .chaines a{
+  font-size: 10px;
+  margin-left: -30px;
+}
+
+ /* Variables*/
+
+.variables {
+  width: 300px;
+  }
+
+#nombre{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#nombre button{
+  margin-left: 60px;
+}
+
+#nombre .demo-var2{
+  padding-left: 0;
+}
+
+.variables #source{
+  width: 300px;
+}
+
+/*Conditions*/
+
+.conditions{
+  width: 300px;
+}
+
+.conditions #btn{
+  display: flex;
+  width: 35px;
+  padding: 2px;
+  margin: 20px 5px;
+}
+
+.conditions #source{
+  width: 300px;
+}
+
+/*Compter*/
+
+#chaine{
+  width: 300px;
+}
+
+#chaine #button{
+  display: flex;
+  padding: 10px 5px;
+  margin: 30px 150px;
+}
+
+#chaine #resultat{
+  font-size: 30px;
+}
+
+#chaine #source{
+  width: 300px;
+}
+
+#test2 #clear{
+  display: flex;
+  padding: 10px 5px;
+  margin: 30px 150px;
+}
+
+/*Tri*/
+
+#trieinp{
+  display: flex;
+}
+
+#trieinp #buttontrie{
+  display: flex;
+  padding: 20px 10px;
+}
+
+/*Boucles*/
+
+#boucles{
+  width: 300px;
+}
+
+#boucles #source{
+  width: 300px;
+}
+
+/*Boucles Imbriquées*/
+
+.demo-imbr #imbr-btn{
+  display: flex;
+  height: 20px;
+  margin: 0px;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+/*Boucles While*/
+
+.while-input #btn{
+  display: flex;
+  height: 20px;
+  margin: 20px;
+  padding-left: 15px;
+  padding-top: 3px;
+  margin-top: 20px;
+}
+
+.while-input #test{
+  display: none;
+}
+
+/*Boucle For*/
+
+.input-for #btn{
+  display: flex;
+  height: 40px;
+  margin: 10px;
+  padding-left: 5px;
+ 
+  
+  margin-top: 20px;
+}
+}

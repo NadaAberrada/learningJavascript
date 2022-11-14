@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  #test{
+
+    background-color: #81a3c1;
+   padding: 20px;
+    
+  
+  }
+  #buttontrie{
+  height: 20px;
+  margin-top: 6px;
+  }
+
+ 
+  #chaine{
+    line-height: 30px;
+  } 
+  .input{
+    width: 8%;
+    margin-left: 8px;
+  
+  }
+#inputs , #inputstrie{
+  width: 280PX;
+}
+  #trieinp{
+    display: flex;
+    /* height: 20px; */
+    margin-top: 15px;
+    
+  }
+
+button{
+  background-color: #111;
+  color: aliceblue;
+  border: none;
+  width: 80px;
+  cursor: pointer;
+ 
+  
+}
+button:hover{
+  transition: 0.3s;
+  background-color: #ADCBE3;
+  cursor: pointer;
+  
+}
+
+#valeur{
+  width: 10%;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 987px) {
+  #test #button {
+    margin-left: 0px;
+  }
+
+  #test #clear{
+    margin-left: 0px;
+  }
+}

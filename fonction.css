@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.functions{
+  
+    
+    line-height: 30px;
+    
+}
+.demo-func{
+  
+    background-color: #81a3c1;
+ 
+    text-align: center;
+    padding: 20px;
+}
+.demo-func input{
+    width: 23%;
+    margin-bottom: 20px;
+}
+.demo-func button{
+    width: 60px;
+    height: 30px;
+    color: aliceblue;
+    margin-bottom: 20px;
+   background-color: black;
+  border: none;
+   cursor: pointer;
+}
+
+.demo-func #Somme{
+    background-color: orangered;
+}
+.demo-func #Somme:hover{
+    background-color: #ADCBE3;
+    transition: 0.3s;
+   
+    cursor: pointer;
+}
+button:hover{
+    transition: 0.3s;
+   
+    cursor: pointer;
+    background-color: #ADCBE3;
+  }
+.demo-func #random{
+    width: 45%;
+}
+    
+@media screen and (max-width: 987px) {
+ 
+
+    .functions {
+    width: 300px;
+    }
+
+    .functions #source{
+        width: 300px;
+    }
+}

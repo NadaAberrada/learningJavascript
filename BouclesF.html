@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="test"><a href="Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test">  <a href="fonctions.html">Les fonctions</a></li>
+            <li class="drop">
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les boucles</h4>
+               
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<section id="boucles">
+    <section class="bouc-for">
+        <h1>Table de multiplication</h1>
+        <div class="enonce-for">
+            <h3>Enoncé</h3>
+            <p>Afficher la table de multiplication d'un nombre saisi par l'utilisateur dans un input.</p>
+        </div>
+        <div class="demo-for">
+            <h3>Démo</h3>
+        </div>
+            <div class="input-for">
+                <input type="text" id="forinp">
+                <button id="btn" onclick="btn()">Générer la table</button>
+              
+                <h6 id="table"></h6>
+            
+        </div>
+        <div class="for-code">
+            <h3>Code Source</h3>
+        </div>
+        <textarea name="source" id="source" cols="90" rows="13" readonly>
+
+               var number=document.getElementById("forinp").value;
+            var table=document.getElementById("table")
+            table.innerHTML="";
+            for(var i=1;i<=10;i++)
+            {
+                      table.innerHTML+=i+"*"+number+"="+i*number+"<br>";
+            }</textarea>
+    </section>
+</section>
+    <script>
+        
+        function btn(){
+            
+
+            var number=document.getElementById("forinp").value;
+            var table=document.getElementById("table")
+            table.innerHTML="";
+            for(var i=1;i<=10;i++)
+            {
+                      table.innerHTML+=i+"*"+number+"="+i*number+"<br>";
+                      table.style.fontSize="20px";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

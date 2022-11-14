@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="test"><a href="Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test">  <a href="fonctions.html">Les fonctions</a></li>
+            <li class="drop">
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les boucles</h4>
+               
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<section id="boucles">
+    <section class="bouc-imbr">
+        <h1>Losange en étoiles</h1>
+        <div class="enonce-imbr">
+            <h3>Enoncé</h3>
+            <p>Ce programme a pour objectif de dessiner un losange en étoiles dont 
+                la longueur<br> des diagonales est un nombre impair
+            saisi par l'utilisateur.  Dans le cas où l'utilisateur <br>entre un nombre pair, 
+            il faut afficher une erreur.</p>
+        </div>  
+        <div class="demo-imbr">
+            <h3>Démo</h3>
+            <div class="imbr-input">
+            <span>Saisisser la longueur des diagonales</span>
+            <input type="text" id="number">
+            <button id="imbr-btn" onclick="btn()">Dessiner</button>
+            <h6
+             id="etoile">
+
+            </h6>
+            </div>
+        </div>
+        <div class="imbr-code">
+            <h3>Code Source</h3>
+        </div>
+        <textarea name="source" id="source" cols="95" rows="14" readonly>
+            function btn()
+            {
+                    var etoile=document.getElementById("etoile");
+                    var number=document.getElementById("number").value;
+                    if(number%2!=0)
+                    {
+                        etoile.innerHTML=" ";
+                            for(var i=1;i<=number;i++)
+                            {
+                                    for(var j=1;j<=i;j++){
+                                        
+    
+                                    etoile.innerHTML+="*";
+                                        // document.write("*");
+                                    }
+                                    etoile.innerHTML+="<br>";
+                                            
+                            } 
+                    }
+                    else{
+                        alert("test");
+                    }
+                 
+    
+            }
+        </textarea>
+    </section>
+</section>
+    <script>
+        function btn()
+        {
+                var etoile=document.getElementById("etoile");
+                var number=document.getElementById("number").value;
+                if(number%2!=0)
+                {
+                    etoile.innerHTML=" ";
+                        for(var i=1;i<=number;i++)
+                        {
+                                for(var j=1;j<=i;j++){
+                                etoile.innerHTML+=" *";
+                                etoile.style.fontSize="20px";
+                                }
+                                etoile.innerHTML+="<br>";
+                                        
+                        } 
+                }
+                else{
+                    etoile.innerHTML="le nombre pair choisi un nombre impair";
+                    etoile.style.fontSize="20px";
+                    etoile.style.color="red";
+                }
+             
+
+        }
+    </script>
+</body>
+</html>

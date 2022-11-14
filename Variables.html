@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+     <nav>
+        <ul>
+            <li class="test"><a href="Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test">  <a href="fonctions.html">Les fonctions</a></li>
+            <li class="drop">
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li class="drop">
+            <li>
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les boucles</h4>
+               
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <section class="variables">
+        <h1>Permutation de deux nombres</h1>
+        <div class="enonce-var">
+            <h3>Enoncé</h3>
+            <p>Ecrire un script qui permute deux nombres saisis dans deux inputs</p>
+        </div>
+
+          <h3>Démo</h3>
+
+       <div id="nombre">
+
+           <div class="demo-var1">
+              
+            <label for="num1">
+                <h4>Nombre 1</h4></label>
+            <input  type="text"name="Nombre1" id="Nombre1">
+           
+        </div>
+            <button class="btn-var-right"  onclick="remplacer()">←<br>→</button>
+   
+                    
+                 
+        <div class="demo-var2"> 
+            <label for="num2"><h4> Nombre 2</h4></label>
+                 
+                  <input type="text" name="Nombre2"  id="Nombre2">
+        </div>
+
+     </div>
+     
+        <div class="var-code">
+            <h3>Code Source</h3>
+        </div>
+        <textarea name="source" id="source" cols="100" rows="13" readonly>
+            function remplacer(){
+                var nombre1=document.getElementById("Nombre1").value;
+                var nombre2=document.getElementById("Nombre2").value;  
+               document.getElementById("Nombre2").value=nombre1;
+               document.getElementById("Nombre1").value=nombre2;
+           }
+        </textarea>
+    </section>
+
+   <script> 
+
+  
+    function remplacer(){
+         var nombre1=document.getElementById("Nombre1").value;
+         
+         var nombre2=document.getElementById("Nombre2").value;  
+       
+   
+        document.getElementById("Nombre2").value=nombre1;
+        document.getElementById("Nombre1").value=nombre2;
+        
+        
+
+    }
+   </script>
+   
+    
+</body>
+</html>

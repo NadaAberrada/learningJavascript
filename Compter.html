@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="RecercherS.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="test"><a href="./Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test">  <a href="fonctions.html">Les fonctions</a></li>
+            <li class="drop">
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les boucles</h4>
+            
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div id="chaine">
+    
+        <h1>nombre de voyelles</h1>
+            <div id="enonce-var">
+                <h3>Enoncé</h3>
+               <p>Ecrire un programme Javascript qui permet de calculer le nombre de voyelles 
+                <br>(a,e,i,o,u,y) dans une phrase
+                 saisie par l’utilisateur</p>  
+            </div>
+                                <h3 id="demo">Démo</h3>
+                                <div id="test">
+                                                <label>Saisir une pharse </label> 
+                                                <input type="text"id="phrase"  >
+                                               <button id="button" onclick="saiserPhrase()">Recherche</button> <br>
+                                            <div class="bloc">
+                                                <h6 id="resultat"></h6>
+                                            </div>
+                             
+                                            </div>   
+                        <div class="var-code">
+                                            <h3>Code Source</h3>
+                                </div>
+            <textarea name="source" id="source" cols="95" rows="14" readonly>
+                function saiserPhrase(){
+            
+                    var vowelsCount = 0;
+                  
+                    var string=document.getElementById("phrase").value;
+                    //loop through the string
+                    for (var i = 0; i <= string.length - 1; i++) {
+                  
+                    //if a vowel, add to vowel count
+                      if (string.charAt(i) == "a" || string.charAt(i) == "e" || 
+                      string.charAt(i) == "i"|| string.charAt(i) == "o" 
+                      || string.charAt(i) == "u")
+                        {
+                        vowelsCount += 1;
+                      }
+                    }
+                    document.getElementById('resultat').innerHTML=vowelsCount;
+                  }
+                  
+                        
+                                        
+                            </textarea>
+                        </div>      
+                    </div>
+        </div>
+    </div>
+    <script>
+        function saiserPhrase(){
+            
+  var vowelsCount = 0;
+
+  var string=document.getElementById("phrase").value;
+  
+ 
+  for (var i = 0; i <= string.length - 1; i++) {
+
+ 
+    if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  document.getElementById('resultat').innerHTML=vowelsCount;
+}
+
+        
+    </script>
+
+
+
+
+</body>
+</html>

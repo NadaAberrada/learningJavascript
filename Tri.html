@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="RecercherS.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="test"><a href="./Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test">  <a href="fonctions.html">Les fonctions</a></li>
+            <li class="drop">
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <h4 class="chain">Les boucles</h4>
+               
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div id="chaine">
+    
+        <h1>Tri d’un tableau</h1>
+            <div id="enonce">
+                <h3>Enoncé</h3>
+               <p>Ecrire un programme Javascript qui permet de trier un tableau d’entier (Utiliser n’importe quel <br> algorithme de tri mais surtout pas la fonction Sort de l’objet Array).
+                L’utilisateur commence tout <br>d’abord par saisir la taille du tableau, ensuite il remplit le tableau  pour cliquer à la fin sur<br> un bouton trier : celui-ci affichera le tableau en ordre croissant ou décroissant.
+                </p>  
+            </div>
+                                <h3 id="demo">Démo</h3>
+                                <div id="test">
+        
+                                             <label>Donner la taille du tableau</label> 
+                                            <input type="text"id="taille"  >
+                                            <button id="button" onclick="saiserPhrase()">valider</button> <br>
+
+                                            <div id="trieinp">
+                                                <label>Veuiller remplir le tableau</label>
+                                                 <div id="inputs">
+                                                 </div>
+                                                 <button id="buttontrie" onclick="trie()">trier</button> <br>
+                                              </div>
+                                            
+                                            <div id="inputstrie">  
+                                            </div>
+                                            <h6 id="resu"></h6>
+                                           
+                                            
+                                 </div>   
+
+                                     <div class="var-code">
+                                            <h3>Code Source</h3>
+                                         </div>
+        <textarea name="source" id="source" cols="110" rows="14">
+            function saiserPhrase(){
+    var taille = parseInt(document.getElementById('taille').value);
+    if(taille<10)
+    {
+        for(var a=0 ; a< taille ;a++){
+        var inp = document.createElement('INPUT');
+        inp.setAttribute('id', 'input'+a);
+        inp.setAttribute('class', 'input');
+        document.getElementById('inputs').appendChild(inp);
+        document.getElementById('button').disabled=true;
+    }
+    }else
+    {
+        document.getElementById('taille').value="";
+        document.getElementById('resu').innerHTML="choisi une autre nombre de taille";
+        document.getElementById('resu').style.fontSize="20px";
+        document.getElementById('resu').style.color="red";
+
+
+    }
+    
+    }
+
+    function trie(){
+        document.getElementById('resu').value="";
+    var taille = parseInt(document.getElementById('taille').value)
+    for( var j=0 ; j< taille ;j++)
+    {
+        var trieInp = document.createElement('INPUT');
+        trieInp.setAttribute('id', 'trieInp'+j)
+        trieInp.setAttribute('class', 'input');
+        document.getElementById('inputstrie').appendChild(trieInp);
+    }
+    
+    const array = [];
+    const array1 = [];
+    for (let i = 0; i < taille; i++) {
+        array.push(parseInt(document.getElementById('input'+i).value));
+    }
+    for (let i = 0; i < taille; i++)
+     {
+        let min = Math.min(...array);
+        const pos = array.indexOf(min);
+        array1.push(min);
+        document.getElementById('trieInp'+i).value = min;
+        array.splice(pos,1);
+    }
+    }
+                                
+    </textarea>
+                        </div>      
+                    </div>
+        </div>
+    </div>
+
+
+<script> 
+ 
+
+
+ function saiserPhrase(){
+    var taille = parseInt(document.getElementById('taille').value);
+    if(taille<10)
+    {
+        for(var a=0 ; a< taille ;a++){
+        var inp = document.createElement('INPUT');
+        inp.setAttribute('id', 'input'+a);
+        inp.setAttribute('class', 'input');
+        document.getElementById('inputs').appendChild(inp);
+        document.getElementById('button').disabled=true;
+    }
+    }else
+    {
+        document.getElementById('taille').value="";
+        document.getElementById('resu').innerHTML="choisi une autre nombre de taille";
+        document.getElementById('resu').style.fontSize="20px";
+        document.getElementById('resu').style.color="red";
+
+
+    }
+    
+    }
+
+    function trie(){
+        document.getElementById('resu').value="";
+    var taille = parseInt(document.getElementById('taille').value)
+    for( var j=0 ; j< taille ;j++)
+    {
+        var trieInp = document.createElement('INPUT');
+        trieInp.setAttribute('id', 'trieInp'+j)
+        trieInp.setAttribute('class', 'input');
+        document.getElementById('inputstrie').appendChild(trieInp);
+    }
+    
+    const array = [];
+    const array1 = [];
+    for (let i = 0; i < taille; i++) {
+        array.push(parseInt(document.getElementById('input'+i).value));
+    }
+    //TRIE
+    for (let i = 0; i < taille; i++)
+     {
+        let min = Math.min(...array);
+        const pos = array.indexOf(min);
+        array1.push(min);
+        document.getElementById('trieInp'+i).value = min;
+        array.splice(pos,1);
+    }
+    }
+    
+
+   
+</script>
+
+
+</body>
+</html>

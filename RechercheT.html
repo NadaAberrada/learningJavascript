@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="RecercherS.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="test"><a href="./Home.html" >Home</a></li>
+            <li class="test"><a href="Variables.html" id="Variables" >Variables</a></li>
+            <li class="test"><a href="Conditions.html" id="Conditions">Conditions</a></li>
+            <li class="test">  <a href="fonctions.html">Les fonctions</a></li>
+            <li>
+                <h4 class="chain">Les chaines</h4>
+                    <ul class="chaines">
+                            <li><a href="Compter.html">Compter le nombre de voyelles dans une chaine</a></li>
+                            <li><a href="rechercherS.html">Recherche et suppression dans une chaine</a></li>
+                    </ul>
+            </li>
+            <li>
+                <h4 class="chain">Les tableaux</h4>
+                <ul class="chaines">
+                    <li><a href="RechercheT.html">Recherche dans un tableau</a></li>
+                    <li><a href="Tri.html">Tri d'un tableau</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4 class="chain">Les boucles</h4>
+               
+                <ul class="chaines">
+                    <li><a href="BouclesI.html">Les boucles imbriquées</a></li>
+                    <li><a href="BouclesW.html">La boucle while</a></li>
+                    <li><a href="BouclesF.html">La boucle for</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="chaine">
+    
+        <h1>Recherche dans un tableau</h1>
+            <div id="enonce">
+                <h3>Enoncé</h3>
+               <p>Ecrire un programme Javascript qui permet de trier un tableau d’entier (Utiliser n’importe quel <br> algorithme de tri mais surtout pas la fonction Sort de l’objet Array).
+                L’utilisateur commence tout <br>d’abord par saisir la taille du tableau, ensuite il remplit le tableau  pour cliquer à la fin sur<br> un bouton trier : celui-ci affichera le tableau en ordre croissant ou décroissant.
+                </p>  
+            </div>
+                                <h3 id="demo">Démo</h3>
+                                <div id="test">
+        
+                                             <label>Donner la taille du tableau</label> 
+                                            <input type="text"id="taille"  >
+                                            <button id="button" onclick="saiserPhrase()">valider</button> <br>
+
+                                            <div id="trieinp">
+                                                <label>Veuiller remplir le tableau</label>
+                                                 <div id="inputs">
+                                                 </div>
+                                              </div>
+                                             <label>Donner la valeur à rechercher dans le tableau</label>
+                                             <input type="text"id="recherinp"  >
+                                                 <button id="rechercher" onclick="rechercher()">rechercher</button>
+                                            <div id="inputstrie">  
+                                            </div>
+                                            <h6 id="resu"></h6>
+                                           
+                                            
+                                 </div>   
+
+                                     <div class="var-code">
+                                            <h3>Code Source</h3>
+                                         </div>
+            <textarea name="source" id="source" cols="110" rows="14">
+                function saiserPhrase(){
+                    var taille = parseInt(document.getElementById('taille').value);
+                    if(taille<10)
+                    {
+                        for(var a=0 ; a< taille ;a++){
+                        var inp = document.createElement('INPUT');
+                        inp.setAttribute('id', 'input'+a);
+                        inp.setAttribute('class', 'input');
+                        document.getElementById('inputs').appendChild(inp);
+                        document.getElementById('button').disabled=true;
+                    }
+                    }else
+                    {
+                        document.getElementById('taille').value="";
+                        document.getElementById('resu').innerHTML="choisi une autre nombre de taille";
+                        document.getElementById('resu').style.fontSize="20px";
+                        document.getElementById('resu').style.color="red";
+                
+                
+                    }
+                    
+                    }
+                
+                    function rechercher(){
+                        document.getElementById('resu').value="";
+                    var taille = parseInt(document.getElementById('taille').value);
+                    var recher = parseInt(document.getElementById('recherinp').value);
+               
+                    const array = [];
+                    const array1 = [];
+                    var t;
+                    t=0;
+                    for (let i = 0; i < taille; i++) {
+                        array.push(parseInt(document.getElementById('input'+i).value));
+                    }
+         
+         
+                         for(var j=0;j<array.length ;j++)
+                            { 
+                             if(array[j]==recher)
+                             {
+                                 t=array[j]; 
+                                 
+                                  document.getElementById('resu').innerHTML="la valeur rechercher est exicet"+t;
+                                      document.getElementById('resu').style.fontSize="20px";
+                                   document.getElementById('resu').style.color="red";
+         
+                                  break;
+                            }
+                            else
+                            {
+                             document.getElementById('resu').innerHTML="nexicet pas";
+                            }
+         
+                            }
+         
+                        
+                   
+                    
+                  
+                    }
+            </textarea>
+                        </div>      
+                    </div>
+        </div>
+    </div>
+
+    <script> 
+ 
+
+
+        function saiserPhrase(){
+           var taille = parseInt(document.getElementById('taille').value);
+           if(taille<10)
+           {
+               for(var a=0 ; a< taille ;a++){
+               var inp = document.createElement('INPUT');
+               inp.setAttribute('id', 'input'+a);
+               inp.setAttribute('class', 'input');
+               document.getElementById('inputs').appendChild(inp);
+               document.getElementById('button').disabled=true;
+           }
+           }else
+           {
+               document.getElementById('taille').value="";
+               document.getElementById('resu').innerHTML="choisi une autre nombre de taille";
+               document.getElementById('resu').style.fontSize="20px";
+               document.getElementById('resu').style.color="red";
+       
+       
+           }
+           
+           }
+       
+           function rechercher(){
+               document.getElementById('resu').value="";
+           var taille = parseInt(document.getElementById('taille').value);
+           var recher = parseInt(document.getElementById('recherinp').value);
+      
+           const array = [];
+           const array1 = [];
+           var t;
+           t=0;
+           for (let i = 0; i < taille; i++) {
+               array.push(parseInt(document.getElementById('input'+i).value));
+           }
+
+
+           
+                for(var j=0;j<array.length ;j++)
+                   { 
+                    if(array[j]==recher)
+                    {
+                        t=array[j]; 
+                        
+                         document.getElementById('resu').innerHTML="la valeur rechercher est exicet"+t;
+                             document.getElementById('resu').style.fontSize="20px";
+                          document.getElementById('resu').style.color="red";
+
+                         break;
+                   }
+                   else
+                   {
+                    document.getElementById('resu').innerHTML="nexicet pas";
+                   }
+
+                   }
+
+               
+          
+           
+         
+           }
+           
+       
+          
+       </script>
+       
+       
+
+
+
+
+    
+</body>
+</html>

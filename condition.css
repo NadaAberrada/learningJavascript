@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.conditions{
+  
+    line-height: 30px;
+    
+  }
+ 
+
+
+  .cond-input{
+   
+     background-color: #81a3c1;
+      padding: 20px;
+     
+  }
+  button{
+    margin-left: 20px;
+    width: 20%;
+    border: none;
+    background-color: #2A4D69;
+  }
+  .input{
+    margin-left: 16px;
+  }
+ 
+  
+
+ 
